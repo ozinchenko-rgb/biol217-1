@@ -10,15 +10,15 @@
 #SBATCH --time=01:00:00
 #SBATCH --reservation=biol217
 
-set -euo pipefail
+cd /work_beegfs/sunam225/metagenomics
 
 module load gcc12-env/12.1.0
 module load micromamba
 export MAMBA_ROOT_PREFIX=$WORK/.micromamba
 
-cd $WORK
+#cd $WORK
 
-micromamba run -n 00_anvio anvi-run-scg-taxonomy -c contig_anvio/contigs.db -T 12 -P 1
+#micromamba run -n 00_anvio anvi-run-scg-taxonomy -c contig_anvio/contigs.db -T 12 -P 1
 
-contig_anvio/contigs.db
+#contig_anvio/contigs.db
 
